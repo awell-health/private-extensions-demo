@@ -16,8 +16,7 @@
     "build": "tsc",
     "lint": "eslint **/*.ts",
     "postinstall": "husky install",
-    "test": "jest",
-    "prepack": "yarn build"
+    "test": "jest"
   },
   "types": "dist/src/index.d.ts",
   "files": [
