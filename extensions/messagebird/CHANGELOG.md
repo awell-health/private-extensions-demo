@@ -1,1 +1,0 @@
-# MessageBird changelog

@@ -1,1 +1,0 @@
-export { sendWhatsAppMessage } from './sendWhatsAppMessage'

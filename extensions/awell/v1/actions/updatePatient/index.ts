@@ -1,1 +1,0 @@
-export { updatePatient } from './updatePatient'

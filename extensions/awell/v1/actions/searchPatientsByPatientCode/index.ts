@@ -1,1 +1,0 @@
-export { searchPatientsByPatientCode } from './searchPatientsByPatientCode'

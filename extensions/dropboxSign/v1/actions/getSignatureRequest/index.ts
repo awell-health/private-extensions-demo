@@ -1,1 +1,0 @@
-export { getSignatureRequest } from './getSignatureRequest'

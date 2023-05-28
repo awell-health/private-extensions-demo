@@ -1,1 +1,0 @@
-export { getApiUrl } from './getApiUrl'

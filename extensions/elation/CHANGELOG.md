@@ -1,1 +1,0 @@
-# Elation Changelog

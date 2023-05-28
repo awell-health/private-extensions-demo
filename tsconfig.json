@@ -10,12 +10,6 @@
     "resolveJsonModule": true
   },
   "include": [
-    "lib/**/*.ts",
-    "extensions/**/*.ts",
-    "src/**/*.ts",
-    "examples/**/*.ts"
-  ],
-  "exclude": [
-    "**/scripts/*.ts"
+    "extensions/**/*.ts"
   ]
 }

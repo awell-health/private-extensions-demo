@@ -1,1 +1,0 @@
-export { sendSms } from './sendSms'
