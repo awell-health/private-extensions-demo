@@ -1,8 +1,9 @@
 {
   "name": "@awell-health/private-extensions-demo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packageManager": "yarn@3.4.1",
-  "main": "dist/extensions/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/awell-health/private-extensions-demo.git"
@@ -18,7 +19,6 @@
     "postinstall": "husky install",
     "test": "jest"
   },
-  "types": "dist/src/index.d.ts",
   "files": [
     "dist",
     "!**/*.test.ts",
