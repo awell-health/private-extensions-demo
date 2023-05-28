@@ -1,4 +1,4 @@
-import { type Extension, Category, AuthorType } from '@awell-health/awell-extensions-types'
+import { type Extension, Category, AuthorType } from '@awell-health/extensions-core'
 import { log } from './actions'
 import { settings } from './settings'
 import { webhooks } from './webhooks'

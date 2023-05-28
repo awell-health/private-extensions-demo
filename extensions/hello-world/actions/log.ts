@@ -4,7 +4,7 @@ import {
   type Action,
   type DataPointDefinition,
   type Field,
-} from '@awell-health/awell-extensions-types'
+} from '@awell-health/extensions-core'
 import { type settings } from '../settings'
 
 const fields = {

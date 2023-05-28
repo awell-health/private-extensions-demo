@@ -1,4 +1,4 @@
-import { type DataPointDefinition, type Webhook } from '@awell-health/awell-extensions-types'
+import { type DataPointDefinition, type Webhook } from '@awell-health/extensions-core'
 
 const dataPoints = {
   eventType: {
