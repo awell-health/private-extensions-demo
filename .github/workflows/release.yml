@@ -3,7 +3,7 @@ name: Create package and publish it
 on:
   push:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   deploy:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Compile Typescript
         run: yarn build
-      
+
       - name: Run tests
         run: yarn test
 
@@ -36,7 +36,7 @@ jobs:
           yarn config set npmAlwaysAuth true
           yarn config set npmAuthToken $NPM_AUTH_TOKEN
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_PRIVATE_EXTENSIONS_DEMO_CI_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_PRIVATE_EXTENSIONS_DEMO_PUBLISHER_TOKEN }}
 
       - name: Publish to NPM Registry
         run: yarn npm publish --access public
