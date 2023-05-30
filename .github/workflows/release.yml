@@ -39,4 +39,4 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_PRIVATE_EXTENSIONS_DEMO_PUBLISHER_TOKEN }}
 
       - name: Publish to NPM Registry
-        run: yarn npm publish --access public
+        run: yarn npm publish
