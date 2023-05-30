@@ -28,13 +28,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@awell-health/extensions-core", "npm:0.1.5"],\
+            ["@awell-health/extensions-core", "npm:0.1.6"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.191"],\
             ["@types/node", "npm:18.13.0"],\
             ["@types/node-fetch", "npm:2.6.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.52.0"],\
-            ["axios", "npm:1.3.4"],\
+            ["axios", "npm:1.4.0"],\
             ["date-fns", "npm:2.29.3"],\
             ["eslint", "npm:8.34.0"],\
             ["eslint-config-prettier", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:8.6.0"],\
@@ -70,10 +70,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@awell-health/extensions-core", [\
-        ["npm:0.1.5", {\
-          "packageLocation": "./.yarn/cache/@awell-health-extensions-core-npm-0.1.5-0ba4d4a940-fef79ce2d3.zip/node_modules/@awell-health/extensions-core/",\
+        ["npm:0.1.6", {\
+          "packageLocation": "./.yarn/cache/@awell-health-extensions-core-npm-0.1.6-0555bf8f3e-6c89e9ffe8.zip/node_modules/@awell-health/extensions-core/",\
           "packageDependencies": [\
-            ["@awell-health/extensions-core", "npm:0.1.5"],\
+            ["@awell-health/extensions-core", "npm:0.1.6"],\
             ["axios", "npm:1.4.0"],\
             ["date-fns", "npm:2.30.0"],\
             ["libphonenumber-js", "npm:1.10.30"],\
@@ -87,13 +87,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@awell-health/private-extensions-demo", "workspace:."],\
-            ["@awell-health/extensions-core", "npm:0.1.5"],\
+            ["@awell-health/extensions-core", "npm:0.1.6"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/lodash", "npm:4.14.191"],\
             ["@types/node", "npm:18.13.0"],\
             ["@types/node-fetch", "npm:2.6.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.52.0"],\
-            ["axios", "npm:1.3.4"],\
+            ["axios", "npm:1.4.0"],\
             ["date-fns", "npm:2.29.3"],\
             ["eslint", "npm:8.34.0"],\
             ["eslint-config-prettier", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:8.6.0"],\
@@ -2219,16 +2219,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["axios", [\
-        ["npm:1.3.4", {\
-          "packageLocation": "./.yarn/cache/axios-npm-1.3.4-01ea685178-7440edefcf.zip/node_modules/axios/",\
-          "packageDependencies": [\
-            ["axios", "npm:1.3.4"],\
-            ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"],\
-            ["form-data", "npm:4.0.0"],\
-            ["proxy-from-env", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.4.0", {\
           "packageLocation": "./.yarn/cache/axios-npm-1.4.0-4d7ce8ca3e-7fb6a4313b.zip/node_modules/axios/",\
           "packageDependencies": [\
