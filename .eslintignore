@@ -1,2 +1,3 @@
-**/*/gql/*.ts
 jest.config.js
+codegen.ts
+graphql-request.ts

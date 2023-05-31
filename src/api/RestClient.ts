@@ -1,17 +1,6 @@
-import { cache } from '@awell-health/extensions-core'
 import * as Axios from 'axios'
 import { OAuthClient, type OAuthGrantRequest } from '../oauth'
-
-/**
- * A cache service can be used in combination with the OAuth API client
- * to automatically cache tokens between requests.
- * The only cache implementation available is a simple in-memory cache,
- * so it has to be initialised as a singleton to preserve the data across
- * the lifecycle of the server running your extension.
- * Note that we will soon be releasing another implementation of the cache
- * service that will remove this restriction.
- */
-const cacheService = new cache.InMemoryCache()
+import { cacheService } from './cacheService'
 
 /**
  * This sample client uses a publicly available Curity Playground to illustrate

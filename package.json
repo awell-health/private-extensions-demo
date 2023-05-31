@@ -17,7 +17,8 @@
     "build": "tsc",
     "lint": "eslint **/*.ts",
     "postinstall": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "files": [
     "dist",
@@ -26,6 +27,11 @@
     "!**/__mocks__/**"
   ],
   "devDependencies": {
+    "@graphql-codegen/cli": "4.0.0",
+    "@graphql-codegen/client-preset": "4.0.0",
+    "@graphql-codegen/typescript": "^4.0.0",
+    "@graphql-codegen/typescript-graphql-request": "^5.0.0",
+    "@graphql-codegen/typescript-operations": "^4.0.0",
     "@types/jest": "^29.4.0",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.13.0",
@@ -50,6 +56,9 @@
     "@awell-health/extensions-core": "0.1.6",
     "axios": "1.4.0",
     "date-fns": "^2.29.3",
+    "graphql": "^16.6.0",
+    "graphql-request": "^6.1.0",
+    "graphql-tag": "^2.12.6",
     "lodash": "^4.17.21",
     "node-fetch": "2",
     "zod": "^3.21.4",
