@@ -1,9 +1,13 @@
-import { type Extension, Category, AuthorType } from '@awell-health/extensions-core'
+import {
+  type Extension,
+  Category,
+  AuthorType,
+} from '@awell-health/extensions-core'
 import { log } from './actions'
 import { settings } from './settings'
 import { webhooks } from './webhooks'
 
-export const HelloWorld: Extension = {
+const HelloWorld: Extension = {
   key: 'private-hello-world',
   title: 'Hello World !',
   description:
@@ -20,3 +24,5 @@ export const HelloWorld: Extension = {
   },
   webhooks,
 }
+
+export default HelloWorld

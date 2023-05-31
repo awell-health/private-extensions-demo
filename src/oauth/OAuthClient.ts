@@ -7,43 +7,58 @@ import {
   type OAuthOpts,
 } from './OAuth'
 
-type Logger = typeof console
-
-export interface OAuthApiClientOpts {
-  auth: OAuthOpts
-  api: {
-    baseURL: string
-  }
-  log?: Logger
-}
-
-export class OAuthApiClient {
-  readonly grantRequest: OAuthGrantRequest
+/**
+ * Supported OAuth Grant Types:
+ * - Client Credentials
+ * - Password Grant
+ *
+ * ### How to use
+ *
+ * Extend this class and define a custom contructor to configure the authentication
+ * server url, the grant type, the cache service to use and the API server URL.
+ * ```
+ * class MyAPIClient {
+ *   auth: OAuthClient
+ *   // See: https://developers.awellhealth.com/awell-extensions/docs/getting-started/store-secrets
+ *   public constructor(
+ *     client_id: string,
+ *     client_secret: string,
+ *     auth_url: string,
+ *     api_base_url: string
+ *   ) {
+ *     const grantRequest: OAuthGrantRequest = {
+ *       client_id,
+ *       client_secret,
+ *       grant_type: 'client_credentials',
+ *     }
+ *     this.auth = new OAuthClient({
+ *       grantRequest,
+ *       url: auth_url
+ *     })
+ *   }
+ * }
+ * ```
+ */
+export class OAuthClient {
+  readonly grant: OAuthGrantRequest
   readonly cacheService: cache.CacheService<string>
-  readonly authClient: Axios.AxiosInstance
-  client: Axios.AxiosInstance
+  readonly client: Axios.AxiosInstance
   private readonly cache_key: string
-  private readonly log: Logger
 
-  public constructor({
-    auth: { grantRequest, cacheService, url },
-    api,
-    log = console,
-  }: OAuthApiClientOpts) {
-    this.grantRequest = { ...grantRequest }
-    this.log = log
+  public constructor({ grant, cacheService, url }: OAuthOpts) {
+    this.grant = grant
 
     this.cacheService = cacheService ?? new cache.NoCache()
 
     this.cache_key = createHash('sha256')
-      .update(JSON.stringify(grantRequest))
+      .update(JSON.stringify(this.grant))
       .digest('hex')
 
     const basicAuth = Buffer.from(
-      `${grantRequest.client_id}:${grantRequest.client_secret}`
+      `${this.grant.client_id}:${this.grant.client_secret}`
     ).toString('base64')
 
-    this.authClient = Axios.default.create({
+    this.client = Axios.default.create({
       baseURL: url,
       headers: {
         authorization: `Basic ${basicAuth}`,
@@ -53,14 +68,7 @@ export class OAuthApiClient {
         return status >= 200 && status < 300
       },
     })
-    this.client = Axios.default.create({
-      baseURL: api.baseURL,
-    })
   }
-
-  /**
-   * OAuth related methods
-   */
 
   protected async invalidateCachedToken(): Promise<void> {
     await this.cacheService.unset(this.cache_key)
@@ -79,15 +87,24 @@ export class OAuthApiClient {
   }
 
   private async autorize(): Promise<OAuthAccessTokenResponse> {
-    const response = await this.authClient.post<OAuthAccessTokenResponse>(
+    const response = await this.client.post<OAuthAccessTokenResponse>(
       '/',
-      new URLSearchParams(Object.entries(this.grantRequest)).toString()
+      new URLSearchParams(Object.entries(this.grant)).toString()
     )
     await this.storeToken(response.data)
     return response.data
   }
 
-  protected async autorizeClient(): Promise<string> {
+  /**
+   * Perform the OAuth grant to obtain an access and saves it in the cache if
+   * a cache service is configured.
+   *
+   * Note that if caching is enabled this will first look for a token in the
+   * cache.
+   *
+   * @returns the access token
+   */
+  public async getAccessToken(): Promise<string> {
     const cachedToken = await this.getCachedToken()
     if (cachedToken !== null) {
       const token = JSON.parse(cachedToken) as OAuthAccessTokenResponse
@@ -95,7 +112,6 @@ export class OAuthApiClient {
     }
 
     const token = await this.autorize()
-    this.client.defaults.headers.Authorization = `Bearer ${token.access_token}`
     return token.access_token
   }
 }

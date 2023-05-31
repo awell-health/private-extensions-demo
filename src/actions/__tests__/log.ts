@@ -1,4 +1,4 @@
-import { log } from '../'
+import { log } from '..'
 
 describe('HelloWorld - log', () => {
   test('Should call onComplete', async () => {

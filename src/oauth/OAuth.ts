@@ -38,7 +38,7 @@ export interface OAuthAccessTokenResponse {
 }
 
 export interface OAuthOpts {
-  grantRequest: OAuthGrantRequest
+  grant: OAuthGrantRequest
   url: string
   cacheService?: cache.CacheService<string>
 }
