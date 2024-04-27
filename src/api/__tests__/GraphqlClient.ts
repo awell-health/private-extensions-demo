@@ -33,6 +33,5 @@ test('Should set the access token in the request header', async () => {
 test('Should successfully call the get all films query', async () => {
   const client = new GraphqlClient(apiConfig)
   const response = await client.getAllFilms()
-  console.log(response)
   expect(response).toBeDefined()
 })
