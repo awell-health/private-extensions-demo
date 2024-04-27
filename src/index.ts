@@ -9,7 +9,7 @@ import { webhooks } from './webhooks'
 
 const HelloWorld: Extension = {
   key: 'private-hello-world',
-  title: 'Hello World !',
+  title: 'Hello World!',
   description:
     'An example extension developers can look at to get started with building their first private extension.',
   icon_url:
