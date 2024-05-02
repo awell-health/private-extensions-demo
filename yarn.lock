@@ -63,9 +63,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@awell-health/extensions-core@npm:0.1.28":
-  version: 0.1.28
-  resolution: "@awell-health/extensions-core@npm:0.1.28"
+"@awell-health/extensions-core@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@awell-health/extensions-core@npm:0.1.30"
   dependencies:
     axios: ^1.6.0
     date-fns: ^3.6.0
@@ -73,7 +73,7 @@ __metadata:
     lodash: ^4.17.21
     zod: ^3.23.4
     zod-validation-error: ^3.2.0
-  checksum: a0ed71720d80e68ea6b7ca728ed3490c9f18853bd6e1a22241074b4a4e5f1825b59df5df532513d9c594ece7450dcdeec45d7fd6c1f513ca174b74ee5833aa04
+  checksum: 42809f11b533eb8215dad580e9497038f95ffcac8a5fa4fa1f1b1db7cf3b51d3c861de797d8f276e8b0a7f8d7ca644c2f8715ee1dadfc37584617925849345b0
   languageName: node
   linkType: hard
 
@@ -81,7 +81,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@awell-health/private-extensions-demo@workspace:."
   dependencies:
-    "@awell-health/extensions-core": 0.1.28
+    "@awell-health/extensions-core": 0.1.30
     "@graphql-codegen/cli": ^5.0.0
     "@graphql-codegen/client-preset": ^4.1.0
     "@graphql-codegen/typescript": ^4.0.2
@@ -118,8 +118,8 @@ __metadata:
     ts-jest: ^29.0.5
     ts-node-dev: ^2.0.0
     typescript: 4.9.5
-    zod: ^3.22.3
-    zod-validation-error: ^1.0.1
+    zod: ^3.23.5
+    zod-validation-error: ^3.2.0
   languageName: unknown
   linkType: soft
 
@@ -9415,15 +9415,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod-validation-error@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "zod-validation-error@npm:1.0.1"
-  peerDependencies:
-    zod: ^3.18.0
-  checksum: 0ad705b9eab062e06171b9f118fa2e36a8ccb9dda496bb5c65eefc0d665706e296587bf7fafb77b274e401f82029d403de689e5f58b9a5b627a254e4bd4bddac
-  languageName: node
-  linkType: hard
-
 "zod-validation-error@npm:^3.2.0":
   version: 3.2.0
   resolution: "zod-validation-error@npm:3.2.0"
@@ -9433,9 +9424,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.22.3, zod@npm:^3.23.4":
+"zod@npm:^3.23.4":
   version: 3.23.4
   resolution: "zod@npm:3.23.4"
   checksum: 58f6e298c51d9ae01a1b1a1692ac7f00774b466d9a287a1ff8d61ff1fbe0ae9b0f050ae1cf1a8f71e4c6ccd0333a3cc340f339360fab5f5046cc954d10525a54
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.23.5":
+  version: 3.23.5
+  resolution: "zod@npm:3.23.5"
+  checksum: 4b83c93c4d43640b31eb4289efedb23f303a272c39f8b492ee4b2fec1a1da0de078db3786a2e6cc08d6803f03e842af2ae16b430c7f2e0fea3eba16b72a9db36
   languageName: node
   linkType: hard

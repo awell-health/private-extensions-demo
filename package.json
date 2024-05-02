@@ -1,6 +1,6 @@
 {
   "name": "@awell-health/private-extensions-demo",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "packageManager": "yarn@3.4.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -61,7 +61,7 @@
     "typescript": "4.9.5"
   },
   "dependencies": {
-    "@awell-health/extensions-core": "0.1.28",
+    "@awell-health/extensions-core": "0.1.30",
     "axios": "^1.6.0",
     "csv-parser": "^3.0.0",
     "date-fns": "^2.29.3",
@@ -70,7 +70,7 @@
     "graphql-request": "^6.1.0",
     "graphql-tag": "^2.12.6",
     "lodash": "^4.17.21",
-    "zod": "^3.22.3",
-    "zod-validation-error": "^1.0.1"
+    "zod": "^3.23.5",
+    "zod-validation-error": "^3.2.0"
   }
 }
