@@ -1,0 +1,52 @@
+name: Version bump
+
+on:
+  push:
+    branches: ['main', 'release/*']
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    outputs:
+      new_version: ${{ steps.bump_version.outputs.new_version }}
+      release_body: ${{ steps.bump_version.outputs.release_body }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{secrets.CONTENTS_AND_WORKFLOWS_TOKEN}}
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Commit and push updated version
+        id: bump_version
+        run: |
+          echo "$(git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:'## %H%n%an <%ae>%n%ad%n%s%n%b%n')" > release_body.md
+          yarn version -i patch
+          new_version=$(cat package.json | jq -r '.version')
+          git config --global user.name "Awell CI"
+          git config --global user.email "ci@awellhealth.com"
+          git add package.json .yarn/versions
+          git commit -m "ci: bump version to $new_version [skip ci]" && git push
+          git tag -a $new_version -m "ci: bump version to $new_version" && git push origin $new_version
+          echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
+
+      - name: Create release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.CONTENTS_AND_WORKFLOWS_TOKEN }}
+          TAG_NAME: ${{ steps.bump_version.outputs.new_version }}
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          release_name: ${{ env.TAG_NAME }}
+          body_path: release_body.md
+          draft: false
+          prerelease: false

@@ -3,7 +3,7 @@ name: Build and test
 on:
   pull_request:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   deploy:
@@ -27,6 +27,20 @@ jobs:
 
       - name: Compile Typescript
         run: yarn build
-      
+
       - name: Run tests
         run: yarn test
+
+      - name: Validate secrets
+        run: |
+          if [ -z "${{ secrets.NPM_PUBLISH_TOKEN }}" ]; then
+            echo "Missing NPM_PUBLISH_TOKEN secret. Please obtain from 1password."
+            exit 1
+          fi
+
+          if [ -z "${{ secrets.CONTENTS_AND_WORKFLOWS_TOKEN }}" ]; then
+            echo "Missing CONTENTS_AND_WORKFLOWS_TOKEN secret. Please obtain from 1password."
+            exit 1
+          fi
+
+          echo "All required secrets are in place."
