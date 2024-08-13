@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@awell-health/extensions-core": "0.1.30",
-    "axios": "^1.6.0",
+    "axios": "^1.7.4",
     "csv-parser": "^3.0.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.4.1",
