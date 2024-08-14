@@ -2929,7 +2929,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["graphql-request", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:6.1.0"],\
             ["http-proxy-agent", "npm:7.0.0"],\
             ["https-proxy-agent", "npm:7.0.0"],\
-            ["jose", "npm:4.14.4"],\
+            ["jose", "npm:4.15.9"],\
             ["js-yaml", "npm:4.1.0"],\
             ["json-stable-stringify", "npm:1.0.2"],\
             ["lodash", "npm:4.17.21"],\
@@ -8865,10 +8865,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jose", [\
-        ["npm:4.14.4", {\
-          "packageLocation": "./.yarn/cache/jose-npm-4.14.4-8255fd76fa-2d820a91a8.zip/node_modules/jose/",\
+        ["npm:4.15.9", {\
+          "packageLocation": "./.yarn/cache/jose-npm-4.15.9-a725b711d7-41abe1c99b.zip/node_modules/jose/",\
           "packageDependencies": [\
-            ["jose", "npm:4.14.4"]\
+            ["jose", "npm:4.15.9"]\
           ],\
           "linkType": "HARD"\
         }]\
