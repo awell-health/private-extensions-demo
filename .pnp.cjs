@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node-fetch", "npm:2.6.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.52.0"],\
             ["@typescript-eslint/parser", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.62.0"],\
-            ["axios", "npm:1.7.4"],\
+            ["axios", "npm:1.7.7"],\
             ["body-parser", "npm:1.20.2"],\
             ["csv-parser", "npm:3.0.0"],\
             ["date-fns", "npm:2.29.3"],\
@@ -173,7 +173,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node-fetch", "npm:2.6.2"],\
             ["@typescript-eslint/eslint-plugin", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.52.0"],\
             ["@typescript-eslint/parser", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.62.0"],\
-            ["axios", "npm:1.7.4"],\
+            ["axios", "npm:1.7.7"],\
             ["body-parser", "npm:1.20.2"],\
             ["csv-parser", "npm:3.0.0"],\
             ["date-fns", "npm:2.29.3"],\
@@ -4773,10 +4773,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:1.7.4", {\
-          "packageLocation": "./.yarn/cache/axios-npm-1.7.4-cc1c89ddba-0c17039a9a.zip/node_modules/axios/",\
+        ["npm:1.7.7", {\
+          "packageLocation": "./.yarn/cache/axios-npm-1.7.7-cfbedc233d-882d4fe0ec.zip/node_modules/axios/",\
           "packageDependencies": [\
-            ["axios", "npm:1.7.4"],\
+            ["axios", "npm:1.7.7"],\
             ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"],\
             ["form-data", "npm:4.0.0"],\
             ["proxy-from-env", "npm:1.1.0"]\
