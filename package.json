@@ -19,7 +19,7 @@
     "build": "tsc",
     "clean": "rimraf dist",
     "codegen": "graphql-codegen --config codegen.ts",
-    "lint": "eslint **/*.ts",
+    "lint": "eslint \"./src/**/*.ts\"",
     "postinstall": "husky install",
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
     "test-server": "ts-node-dev --respawn --transpile-only ./src/test-server.ts"
