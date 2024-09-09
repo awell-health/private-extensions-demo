@@ -35,7 +35,7 @@ export const log: Action<
   fields,
   previewable: true,
   dataPoints,
-  onActivityCreated: async (payload, onComplete): Promise<void> => {
+  onEvent: async ({ payload, onComplete }) => {
     const { fields } = payload
     await onComplete({
       data_points: {

@@ -1,10 +1,22 @@
-import { log } from '..'
+import { TestHelpers } from '@awell-health/extensions-core'
+import { log as actionInterface } from '..'
 
 describe('HelloWorld - log', () => {
+  const {
+    extensionAction: log,
+    onComplete,
+    onError,
+    helpers,
+    clearMocks,
+  } = TestHelpers.fromAction(actionInterface)
+
+  beforeEach(() => {
+    clearMocks()
+  })
+
   test('Should call onComplete', async () => {
-    const onComplete = jest.fn()
-    await log.onActivityCreated(
-      {
+    await log.onEvent({
+      payload: {
         pathway: {
           id: 'pathway-id',
           definition_id: 'pathway-definition-id',
@@ -19,14 +31,14 @@ describe('HelloWorld - log', () => {
         },
       },
       onComplete,
-      jest.fn()
-    )
+      onError,
+      helpers,
+    })
     expect(onComplete).toHaveBeenCalled()
   })
   test('Should call onComplete if fields are undefined', async () => {
-    const onComplete = jest.fn()
-    await log.onActivityCreated(
-      {
+    await log.onEvent({
+      payload: {
         pathway: {
           id: 'pathway-id',
           definition_id: 'pathway-definition-id',
@@ -41,14 +53,14 @@ describe('HelloWorld - log', () => {
         },
       },
       onComplete,
-      jest.fn()
-    )
+      onError,
+      helpers,
+    })
     expect(onComplete).toHaveBeenCalled()
   })
   test('Should call onComplete if settings are undefined', async () => {
-    const onComplete = jest.fn()
-    await log.onActivityCreated(
-      {
+    await log.onEvent({
+      payload: {
         pathway: {
           id: 'pathway-id',
           definition_id: 'pathway-definition-id',
@@ -63,8 +75,9 @@ describe('HelloWorld - log', () => {
         },
       },
       onComplete,
-      jest.fn()
-    )
+      onError,
+      helpers,
+    })
     expect(onComplete).toHaveBeenCalled()
   })
 })

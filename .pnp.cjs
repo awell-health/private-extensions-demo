@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@awell-health/extensions-core", "npm:0.1.30"],\
+            ["@awell-health/extensions-core", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:1.0.3"],\
             ["@graphql-codegen/cli", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.0.2"],\
             ["@graphql-codegen/client-preset", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:4.2.5"],\
             ["@graphql-codegen/typescript", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:4.0.6"],\
@@ -65,7 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:29.0.5"],\
             ["ts-node-dev", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:2.0.0"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
-            ["zod", "npm:3.23.5"],\
+            ["zod", "npm:3.23.4"],\
             ["zod-validation-error", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:3.2.0"]\
           ],\
           "linkType": "SOFT"\
@@ -141,16 +141,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@awell-health/extensions-core", [\
-        ["npm:0.1.30", {\
-          "packageLocation": "./.yarn/cache/@awell-health-extensions-core-npm-0.1.30-3dbd894ebe-42809f11b5.zip/node_modules/@awell-health/extensions-core/",\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/@awell-health-extensions-core-npm-1.0.3-92c911de73-5b7761f16e.zip/node_modules/@awell-health/extensions-core/",\
           "packageDependencies": [\
-            ["@awell-health/extensions-core", "npm:0.1.30"],\
-            ["axios", "npm:1.6.8"],\
+            ["@awell-health/extensions-core", "npm:1.0.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:1.0.3", {\
+          "packageLocation": "./.yarn/__virtual__/@awell-health-extensions-core-virtual-96378d5abf/0/cache/@awell-health-extensions-core-npm-1.0.3-92c911de73-5b7761f16e.zip/node_modules/@awell-health/extensions-core/",\
+          "packageDependencies": [\
+            ["@awell-health/extensions-core", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:1.0.3"],\
+            ["@awell-health/awell-sdk", null],\
+            ["@types/awell-health__awell-sdk", null],\
+            ["@types/json-schema", "npm:7.0.15"],\
+            ["axios", "npm:1.7.4"],\
             ["date-fns", "npm:3.6.0"],\
             ["libphonenumber-js", "npm:1.10.61"],\
             ["lodash", "npm:4.17.21"],\
             ["zod", "npm:3.23.4"],\
-            ["zod-validation-error", "virtual:3dbd894ebe1200eba1bb37634567f62052cf00cdbf601614d15d6ca09fdd4f41f0b0149c1ad182ebaad94522a1e4c9e059af6bf821122de9d1cefcd2574081a0#npm:3.2.0"]\
+            ["zod-validation-error", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:3.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@awell-health/awell-sdk",\
+            "@types/awell-health__awell-sdk"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -160,7 +174,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@awell-health/private-extensions-demo", "workspace:."],\
-            ["@awell-health/extensions-core", "npm:0.1.30"],\
+            ["@awell-health/extensions-core", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:1.0.3"],\
             ["@graphql-codegen/cli", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.0.2"],\
             ["@graphql-codegen/client-preset", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:4.2.5"],\
             ["@graphql-codegen/typescript", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:4.0.6"],\
@@ -197,7 +211,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:29.0.5"],\
             ["ts-node-dev", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:2.0.0"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
-            ["zod", "npm:3.23.5"],\
+            ["zod", "npm:3.23.4"],\
             ["zod-validation-error", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:3.2.0"]\
           ],\
           "linkType": "SOFT"\
@@ -3873,6 +3887,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/json-schema", "npm:7.0.11"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.0.15", {\
+          "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.15-fd16381786-97ed0cb44d.zip/node_modules/@types/json-schema/",\
+          "packageDependencies": [\
+            ["@types/json-schema", "npm:7.0.15"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@types/json-stable-stringify", [\
@@ -4763,21 +4784,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["axios", [\
-        ["npm:1.6.8", {\
-          "packageLocation": "./.yarn/cache/axios-npm-1.6.8-85cf1e7152-bf007fa4b2.zip/node_modules/axios/",\
-          "packageDependencies": [\
-            ["axios", "npm:1.6.8"],\
-            ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"],\
-            ["form-data", "npm:4.0.0"],\
-            ["proxy-from-env", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.7.4", {\
           "packageLocation": "./.yarn/cache/axios-npm-1.7.4-cc1c89ddba-0c17039a9a.zip/node_modules/axios/",\
           "packageDependencies": [\
             ["axios", "npm:1.7.4"],\
-            ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"],\
+            ["follow-redirects", "virtual:cc1c89ddbaa2ee6988ad04cd8f48fb510e98268b86b9002d50ceca7bd737255eca4ec5ce4ed954e6ba12356c7138528653644b23c509c9a7726b952c51404b15#npm:1.15.6"],\
             ["form-data", "npm:4.0.0"],\
             ["proxy-from-env", "npm:1.1.0"]\
           ],\
@@ -7049,10 +7060,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6", {\
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-7bb5ea93fd/0/cache/follow-redirects-npm-1.15.6-50635fe51d-a62c378dfc.zip/node_modules/follow-redirects/",\
+        ["virtual:cc1c89ddbaa2ee6988ad04cd8f48fb510e98268b86b9002d50ceca7bd737255eca4ec5ce4ed954e6ba12356c7138528653644b23c509c9a7726b952c51404b15#npm:1.15.6", {\
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-b46b84e192/0/cache/follow-redirects-npm-1.15.6-50635fe51d-a62c378dfc.zip/node_modules/follow-redirects/",\
           "packageDependencies": [\
-            ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"],\
+            ["follow-redirects", "virtual:cc1c89ddbaa2ee6988ad04cd8f48fb510e98268b86b9002d50ceca7bd737255eca4ec5ce4ed954e6ba12356c7138528653644b23c509c9a7726b952c51404b15#npm:1.15.6"],\
             ["@types/debug", null],\
             ["debug", null]\
           ],\
@@ -12176,13 +12187,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["zod", "npm:3.23.4"]\
           ],\
           "linkType": "HARD"\
-        }],\
-        ["npm:3.23.5", {\
-          "packageLocation": "./.yarn/cache/zod-npm-3.23.5-69ca2a4eed-4b83c93c4d.zip/node_modules/zod/",\
-          "packageDependencies": [\
-            ["zod", "npm:3.23.5"]\
-          ],\
-          "linkType": "HARD"\
         }]\
       ]],\
       ["zod-validation-error", [\
@@ -12197,19 +12201,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/zod-validation-error-virtual-ff78ba3057/0/cache/zod-validation-error-npm-3.2.0-8a0d8069b2-4d541566ff.zip/node_modules/zod-validation-error/",\
           "packageDependencies": [\
             ["zod-validation-error", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:3.2.0"],\
-            ["@types/zod", null],\
-            ["zod", "npm:3.23.5"]\
-          ],\
-          "packagePeers": [\
-            "@types/zod",\
-            "zod"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:3dbd894ebe1200eba1bb37634567f62052cf00cdbf601614d15d6ca09fdd4f41f0b0149c1ad182ebaad94522a1e4c9e059af6bf821122de9d1cefcd2574081a0#npm:3.2.0", {\
-          "packageLocation": "./.yarn/__virtual__/zod-validation-error-virtual-680cfcded1/0/cache/zod-validation-error-npm-3.2.0-8a0d8069b2-4d541566ff.zip/node_modules/zod-validation-error/",\
-          "packageDependencies": [\
-            ["zod-validation-error", "virtual:3dbd894ebe1200eba1bb37634567f62052cf00cdbf601614d15d6ca09fdd4f41f0b0149c1ad182ebaad94522a1e4c9e059af6bf821122de9d1cefcd2574081a0#npm:3.2.0"],\
             ["@types/zod", null],\
             ["zod", "npm:3.23.4"]\
           ],\

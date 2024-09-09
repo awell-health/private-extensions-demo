@@ -1,4 +1,9 @@
-import { type DataPointDefinition, type Webhook } from '@awell-health/extensions-core'
+import {
+  type DataPointDefinition,
+  type Webhook,
+} from '@awell-health/extensions-core'
+import { isNil } from 'lodash'
+import { type settings } from '../settings'
 
 const dataPoints = {
   eventType: {
@@ -6,7 +11,7 @@ const dataPoints = {
     valueType: 'string',
   },
   hello: {
-    key: 'webhookDataPoint',
+    key: 'hello',
     valueType: 'string',
   },
 } satisfies Record<string, DataPointDefinition>
@@ -17,19 +22,32 @@ export interface Payload {
   hello: string
 }
 
-export const demo: Webhook<keyof typeof dataPoints, Payload> = {
-  key: 'demo',
-  dataPoints,
-  onWebhookReceived: async ({ payload }, onSuccess, onError) => {
-    const { eventType, hello } = payload
-    await onSuccess({
-      data_points: {
-        eventType,
-        hello,
-      },
-    })
-  },
-}
+export const demo: Webhook<keyof typeof dataPoints, Payload, typeof settings> =
+  {
+    key: 'demo',
+    dataPoints,
+    onEvent: async ({
+      payload: { payload, headers, rawBody, settings },
+      onSuccess,
+      onError,
+      helpers,
+    }) => {
+      const signingSecret = headers['x-signing-secret']
+      if (isNil(signingSecret) || signingSecret !== settings.secret) {
+        await onError({
+          response: { statusCode: 401, message: 'Unauthorized' },
+        })
+        return
+      }
+      const { eventType, hello } = payload
+      await onSuccess({
+        data_points: {
+          eventType,
+          hello,
+        },
+      })
+    },
+  }
 
 // Unnecessary, but included to help with type inference and consistency
 export type Demo = typeof demo
