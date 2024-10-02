@@ -1,9 +1,0 @@
-query allFilms {
-  allFilms {
-    films {
-      title
-      director
-      releaseDate
-    }
-  }
-}

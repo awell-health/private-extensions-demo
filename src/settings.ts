@@ -6,5 +6,6 @@ export const settings = {
     label: 'Secret',
     obfuscated: true,
     description: 'A secret value needed by the extension like an API key.',
+    required: false,
   },
 } satisfies Record<string, Setting>
