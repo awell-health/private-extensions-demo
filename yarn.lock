@@ -28,9 +28,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@awell-health/extensions-core@npm:^1.0.11-beta.2":
-  version: 1.0.11-beta.2
-  resolution: "@awell-health/extensions-core@npm:1.0.11-beta.2"
+"@awell-health/extensions-core@npm:^1.0.11-beta.3":
+  version: 1.0.11-beta.3
+  resolution: "@awell-health/extensions-core@npm:1.0.11-beta.3"
   dependencies:
     "@types/json-schema": ^7.0.15
     axios: ^1.7.4
@@ -41,7 +41,7 @@ __metadata:
     zod-validation-error: ^3.2.0
   peerDependencies:
     "@awell-health/awell-sdk": "*"
-  checksum: afae2522bac5a38d403d6dc3c769d5540b790e1f06866d9891151f2efe1e9506e58416c2a45868c4b848c2527ee91f4179d4248be1ef53f3ee17237a1504b1ca
+  checksum: f841a204c5a8876d4356f54d47ceddc417afbc87f82885ad6d92c7633caad0ad7d4ec218d517b512d3cb06d278a5bbb69205694318a0e5630c641e0aa6a933dc
   languageName: node
   linkType: hard
 
@@ -50,7 +50,7 @@ __metadata:
   resolution: "@awell-health/private-extensions-demo@workspace:."
   dependencies:
     "@awell-health/awell-sdk": ^0.1.13
-    "@awell-health/extensions-core": ^1.0.11-beta.2
+    "@awell-health/extensions-core": ^1.0.11-beta.3
     "@types/jest": ^29.5.12
     "@types/lodash": ^4.14.191
     "@types/node": ^20.11.24

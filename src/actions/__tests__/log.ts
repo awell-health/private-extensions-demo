@@ -25,6 +25,8 @@ describe('HelloWorld - log', () => {
         patient: { id: 'test-patient' },
         fields: {
           hello: 'Some text',
+          string_dropdown: 'option1',
+          number_dropdown: 1,
         },
         settings: {
           secret: 'secret-value',
@@ -34,7 +36,16 @@ describe('HelloWorld - log', () => {
       onError,
       helpers,
     })
-    expect(onComplete).toHaveBeenCalled()
+    expect(onComplete).toHaveBeenCalledTimes(1)
+    expect(onComplete).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data_points: {
+          world: 'Some text',
+          string_selection: 'option1',
+          number_selection: '1',
+        },
+      })
+    )
   })
   test('Should call onComplete if fields are undefined', async () => {
     await log.onEvent({
