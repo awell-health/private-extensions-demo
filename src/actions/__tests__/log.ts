@@ -1,5 +1,6 @@
 import { TestHelpers } from '@awell-health/extensions-core'
 import { log as actionInterface } from '..'
+import { generateTestPayload } from '../../test-helpers'
 
 describe('HelloWorld - log', () => {
   const {
@@ -16,20 +17,14 @@ describe('HelloWorld - log', () => {
 
   test('Should call onComplete', async () => {
     await log.onEvent({
-      payload: {
-        pathway: {
-          id: 'pathway-id',
-          definition_id: 'pathway-definition-id',
-        },
-        activity: { id: 'test-activity' },
-        patient: { id: 'test-patient' },
+      payload: generateTestPayload({
         fields: {
           hello: 'Some text',
         },
         settings: {
           secret: 'secret-value',
         },
-      },
+      }),
       onComplete,
       onError,
       helpers,
@@ -38,20 +33,14 @@ describe('HelloWorld - log', () => {
   })
   test('Should call onComplete if fields are undefined', async () => {
     await log.onEvent({
-      payload: {
-        pathway: {
-          id: 'pathway-id',
-          definition_id: 'pathway-definition-id',
-        },
-        activity: { id: 'test-activity' },
-        patient: { id: 'test-patient' },
+      payload: generateTestPayload({
         fields: {
           hello: undefined,
         },
         settings: {
           secret: 'secret-value',
         },
-      },
+      }),
       onComplete,
       onError,
       helpers,
@@ -60,20 +49,14 @@ describe('HelloWorld - log', () => {
   })
   test('Should call onComplete if settings are undefined', async () => {
     await log.onEvent({
-      payload: {
-        pathway: {
-          id: 'pathway-id',
-          definition_id: 'pathway-definition-id',
-        },
-        activity: { id: 'test-activity' },
-        patient: { id: 'test-patient' },
+      payload: generateTestPayload({
         fields: {
           hello: 'Some text',
         },
         settings: {
           secret: undefined,
         },
-      },
+      }),
       onComplete,
       onError,
       helpers,
