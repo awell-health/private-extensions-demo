@@ -25,15 +25,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@awell-health/extensions-core@npm:^1.1.18":
-  version: 1.1.18
-  resolution: "@awell-health/extensions-core@npm:1.1.18"
+"@awell-health/extensions-core@npm:^1.1.19":
+  version: 1.1.19
+  resolution: "@awell-health/extensions-core@npm:1.1.19"
   dependencies:
     "@langchain/core": "npm:^1.2.0"
     "@langchain/openai": "npm:^1.5.1"
     "@types/json-schema": "npm:^7.0.15"
     "@types/react": "npm:^18.3.3"
-    axios: "npm:^1.16.1"
+    axios: "npm:^1.19.0"
     date-fns: "npm:^3.6.0"
     libphonenumber-js: "npm:^1.10.61"
     lodash: "npm:4.18.1"
@@ -43,7 +43,7 @@ __metadata:
     zod-validation-error: "npm:^3.2.0"
   peerDependencies:
     "@awell-health/awell-sdk": "*"
-  checksum: 10c0/ad16f01d74c156242a63c9e56da992d59b94ef8ceef87d9a8e0872e589986b9082190d3591bec1471b9ffb28868f2801fed3948652be22a89d1218b75ac5ce50
+  checksum: 10c0/9eb3acc9666c491ba1a92ea3c12b8ef147dae8027b50cd9093d41399576ca578d0ffcb76b19f99de1ff964fc570a2990164d9512ac104202214b35ed14e80538
   languageName: node
   linkType: hard
 
@@ -51,7 +51,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@awell-health/private-extensions-demo@workspace:."
   dependencies:
-    "@awell-health/extensions-core": "npm:^1.1.18"
+    "@awell-health/extensions-core": "npm:^1.1.19"
     "@types/jest": "npm:^29.5.14"
     "@types/lodash": "npm:^4.17.25"
     "@types/node": "npm:^20.19.43"
@@ -1428,24 +1428,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.0.0":
-  version: 5.51.0
-  resolution: "@typescript-eslint/parser@npm:5.51.0"
-  dependencies:
-    "@typescript-eslint/scope-manager": "npm:5.51.0"
-    "@typescript-eslint/types": "npm:5.51.0"
-    "@typescript-eslint/typescript-estree": "npm:5.51.0"
-    debug: "npm:^4.3.4"
-  peerDependencies:
-    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 10c0/84ed35f727d81a2ebce6c633894ff95eea6b30cc906f7ca6003e93064dc66c9282695de388caa0748a27c82545ad5ef9a661f8f9a337adbe98a33c2d02d7deac
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/parser@npm:^5.62.0":
+"@typescript-eslint/parser@npm:^5.0.0, @typescript-eslint/parser@npm:^5.62.0":
   version: 5.62.0
   resolution: "@typescript-eslint/parser@npm:5.62.0"
   dependencies:
@@ -1459,16 +1442,6 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/315194b3bf39beb9bd16c190956c46beec64b8371e18d6bb72002108b250983eb1e186a01d34b77eb4045f4941acbb243b16155fbb46881105f65e37dc9e24d4
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/scope-manager@npm:5.51.0":
-  version: 5.51.0
-  resolution: "@typescript-eslint/scope-manager@npm:5.51.0"
-  dependencies:
-    "@typescript-eslint/types": "npm:5.51.0"
-    "@typescript-eslint/visitor-keys": "npm:5.51.0"
-  checksum: 10c0/4e24bbc0a3329c78fedfcd048e90b1c77caf9fc7c46f73a5c33c24cc731d6b1f70d3b40f9b10e0c15316be2ce72fc8903db4acc6ba03497f587fa951585a08a1
   languageName: node
   linkType: hard
 
@@ -1499,35 +1472,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:5.51.0":
-  version: 5.51.0
-  resolution: "@typescript-eslint/types@npm:5.51.0"
-  checksum: 10c0/88a8526586a0aa408cc1ec6c5d563cb150fe23412d6f825771081fec3eb216c1f2618bdd208e754fb062c56a9a05ff8d6cc091fd8bfb4c55a4920b716cb46489
-  languageName: node
-  linkType: hard
-
 "@typescript-eslint/types@npm:5.62.0":
   version: 5.62.0
   resolution: "@typescript-eslint/types@npm:5.62.0"
   checksum: 10c0/7febd3a7f0701c0b927e094f02e82d8ee2cada2b186fcb938bc2b94ff6fbad88237afc304cbaf33e82797078bbbb1baf91475f6400912f8b64c89be79bfa4ddf
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/typescript-estree@npm:5.51.0":
-  version: 5.51.0
-  resolution: "@typescript-eslint/typescript-estree@npm:5.51.0"
-  dependencies:
-    "@typescript-eslint/types": "npm:5.51.0"
-    "@typescript-eslint/visitor-keys": "npm:5.51.0"
-    debug: "npm:^4.3.4"
-    globby: "npm:^11.1.0"
-    is-glob: "npm:^4.0.3"
-    semver: "npm:^7.3.7"
-    tsutils: "npm:^3.21.0"
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 10c0/6dcfc986c03751d7f30ed0cc05225550c43859208eb7456788241d84f93647beea2a908d5d411ed90faaac3da2201e78d779927947a699f8b1ba1e9e8820e6fd
   languageName: node
   linkType: hard
 
@@ -1564,16 +1512,6 @@ __metadata:
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
   checksum: 10c0/f09b7d9952e4a205eb1ced31d7684dd55cee40bf8c2d78e923aa8a255318d97279825733902742c09d8690f37a50243f4c4d383ab16bd7aefaf9c4b438f785e1
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/visitor-keys@npm:5.51.0":
-  version: 5.51.0
-  resolution: "@typescript-eslint/visitor-keys@npm:5.51.0"
-  dependencies:
-    "@typescript-eslint/types": "npm:5.51.0"
-    eslint-visitor-keys: "npm:^3.3.0"
-  checksum: 10c0/20a20f33b5bb75095e55863d9260a84f739522e6f23331bbc561dd4c665a278ded8d307c11e7acb55d60e6ebfee5d5a7da3fc9f04bd993efd551d3cdbd5e4fd8
   languageName: node
   linkType: hard
 
@@ -1885,7 +1823,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.16.1":
+"axios@npm:^1.19.0":
   version: 1.19.0
   resolution: "axios@npm:1.19.0"
   dependencies:
