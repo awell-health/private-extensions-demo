@@ -28,6 +28,7 @@ describe('HelloWorld - log', () => {
       onComplete,
       onError,
       helpers,
+      attempt: 0,
     })
     expect(onComplete).toHaveBeenCalled()
   })
@@ -44,6 +45,7 @@ describe('HelloWorld - log', () => {
       onComplete,
       onError,
       helpers,
+      attempt: 0,
     })
     expect(onComplete).toHaveBeenCalled()
   })
@@ -60,6 +62,7 @@ describe('HelloWorld - log', () => {
       onComplete,
       onError,
       helpers,
+      attempt: 0,
     })
     expect(onComplete).toHaveBeenCalled()
   })
