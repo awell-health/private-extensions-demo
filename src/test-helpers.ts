@@ -1,4 +1,5 @@
 import { type NewActivityPayload } from '@awell-health/extensions-core'
+import { merge } from 'lodash'
 
 export const testPayload: NewActivityPayload<any, any> = {
   pathway: {
@@ -35,25 +36,6 @@ type ReturnType<
   settings: Settings
 }
 
-const isPlainObject = (value: unknown): value is Record<string, unknown> =>
-  typeof value === 'object' && value !== null && !Array.isArray(value)
-
-/**
- * Minimal deep merge for plain objects, so the template needs no runtime
- * dependency for a single call. Nested plain objects are merged, any other
- * value overwrites, and `undefined` in the source is ignored. Unlike lodash's
- * `merge` this never mutates its arguments.
- */
-const deepMerge = (target: unknown, source: unknown): unknown => {
-  if (source === undefined) return target
-  if (!isPlainObject(target) || !isPlainObject(source)) return source
-  const result: Record<string, unknown> = { ...target }
-  for (const [key, value] of Object.entries(source)) {
-    result[key] = deepMerge(result[key], value)
-  }
-  return result
-}
-
 export const generateTestPayload = <
   Fields extends FieldsType,
   Settings extends SettingsType
@@ -65,10 +47,8 @@ export const generateTestPayload = <
   fields: Fields
   settings: Settings
 }): ReturnType<Fields, Settings> => ({
-  ...(deepMerge(testPayload, value) as Omit<
-    NewActivityPayload,
-    'fields' | 'settings'
-  >),
+  // merge will mutate the first object, which is a little dangerous
+  ...merge({}, testPayload, value),
   fields,
   settings,
 })

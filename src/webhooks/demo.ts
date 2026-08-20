@@ -2,6 +2,7 @@ import {
   type DataPointDefinition,
   type Webhook,
 } from '@awell-health/extensions-core'
+import { isNil } from 'lodash'
 import { type settings } from '../settings'
 
 const dataPoints = {
@@ -32,7 +33,7 @@ export const demo: Webhook<keyof typeof dataPoints, Payload, typeof settings> =
       helpers,
     }) => {
       const signingSecret = headers['x-signing-secret']
-      if (signingSecret == null || signingSecret !== settings.secret) {
+      if (isNil(signingSecret) || signingSecret !== settings.secret) {
         await onError({
           response: { statusCode: 401, message: 'Unauthorized' },
         })

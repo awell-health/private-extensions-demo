@@ -31,6 +31,7 @@ const RAW_RUNTIME_STATE =
           ["@awell-health/extensions-core", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:1.1.19"],\
           ["@awell-health/private-extensions-demo", "workspace:."],\
           ["@types/jest", "npm:29.5.14"],\
+          ["@types/lodash", "npm:4.17.25"],\
           ["@types/node", "npm:20.19.43"],\
           ["@typescript-eslint/eslint-plugin", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.62.0"],\
           ["@typescript-eslint/parser", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.62.0"],\
@@ -43,6 +44,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:8.0.3"],\
           ["jest", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:29.7.0"],\
           ["lint-staged", "npm:15.5.2"],\
+          ["lodash", "npm:4.18.1"],\
           ["prettier", "npm:3.9.6"],\
           ["rimraf", "npm:4.4.1"],\
           ["ts-jest", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:29.3.4"],\
@@ -112,6 +114,7 @@ const RAW_RUNTIME_STATE =
           ["@awell-health/extensions-core", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:1.1.19"],\
           ["@awell-health/private-extensions-demo", "workspace:."],\
           ["@types/jest", "npm:29.5.14"],\
+          ["@types/lodash", "npm:4.17.25"],\
           ["@types/node", "npm:20.19.43"],\
           ["@typescript-eslint/eslint-plugin", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.62.0"],\
           ["@typescript-eslint/parser", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:5.62.0"],\
@@ -124,6 +127,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:8.0.3"],\
           ["jest", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:29.7.0"],\
           ["lint-staged", "npm:15.5.2"],\
+          ["lodash", "npm:4.18.1"],\
           ["prettier", "npm:3.9.6"],\
           ["rimraf", "npm:4.4.1"],\
           ["ts-jest", "virtual:10b3c1cbb41fcb7025823365127f91d6d403340b8f45d82093a9d58e05cd1513fd05bc20298391600b3b60537e32ea9388b3c8c4134e3017638c7801e147f125#npm:29.3.4"],\
@@ -1867,6 +1871,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../../../Users/mikepack/.yarn/berry/cache/@types-json5-npm-0.0.29-f63a7916bd-10c0.zip/node_modules/@types/json5/",\
         "packageDependencies": [\
           ["@types/json5", "npm:0.0.29"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/lodash", [\
+      ["npm:4.17.25", {\
+        "packageLocation": "../../../../../../../../Users/mikepack/.yarn/berry/cache/@types-lodash-npm-4.17.25-a1b18c42d0-10c0.zip/node_modules/@types/lodash/",\
+        "packageDependencies": [\
+          ["@types/lodash", "npm:4.17.25"]\
         ],\
         "linkType": "HARD"\
       }]\

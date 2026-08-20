@@ -31,6 +31,7 @@
   ],
   "devDependencies": {
     "@types/jest": "^29.5.14",
+    "@types/lodash": "^4.17.25",
     "@types/node": "^20.19.43",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
@@ -49,6 +50,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@awell-health/extensions-core": "^1.1.19"
+    "@awell-health/extensions-core": "^1.1.19",
+    "lodash": "^4.18.1"
   }
 }
