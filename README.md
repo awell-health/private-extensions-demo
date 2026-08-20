@@ -3,7 +3,10 @@ This is a sample repository that shows how to create a private extension in the 
 # What's included
 
 - A sample hello world extension with a single log action
-- Sample Rest & GraphQL API clients with built in support for OAuth and token caching, see `src/api`
+- A sample webhook that verifies a signing secret before publishing data points, see `src/webhooks`
+- For calling external APIs, `@awell-health/extensions-core` provides `APIClient`, `DataWrapper` and `OAuth`
+  with built-in token caching. Import them where you need them and keep credentials in extension settings,
+  never in source.
 
 # Instructions
 
