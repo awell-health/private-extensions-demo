@@ -1,5 +1,4 @@
 import { type NewActivityPayload } from '@awell-health/extensions-core'
-import { merge } from 'lodash'
 
 export const testPayload: NewActivityPayload<any, any> = {
   pathway: {
@@ -20,15 +19,10 @@ export const testPayload: NewActivityPayload<any, any> = {
   settings: {},
 }
 
-type DeepPartial<T> = T extends object
-  ? {
-      [P in keyof T]?: DeepPartial<T[P]>
-    }
-  : T
-
 type FieldsType = Record<string, string | number | boolean | undefined>
 type SettingsType = Record<string, string | undefined>
-type ReturnType<
+
+type TestPayload<
   Fields extends FieldsType,
   Settings extends SettingsType
 > = Omit<NewActivityPayload, 'fields' | 'settings'> & {
@@ -36,19 +30,29 @@ type ReturnType<
   settings: Settings
 }
 
+/**
+ * Builds a payload for testing an action. `fields` and `settings` are
+ * required because they are what a test is usually varying; anything else is
+ * an optional shallow override of the defaults above.
+ *
+ * Overrides replace a top-level key outright rather than merging into it, so
+ * pass a whole `pathway`/`activity`/`patient` object if you need to change
+ * one. If your tests want merging semantics, that is a choice worth making
+ * deliberately in your own repo rather than inheriting it from the template.
+ */
 export const generateTestPayload = <
   Fields extends FieldsType,
   Settings extends SettingsType
 >({
   fields,
   settings,
-  ...value
-}: DeepPartial<Omit<NewActivityPayload, 'fields' | 'settings'>> & {
+  ...overrides
+}: Partial<Omit<NewActivityPayload, 'fields' | 'settings'>> & {
   fields: Fields
   settings: Settings
-}): ReturnType<Fields, Settings> => ({
-  // merge will mutate the first object, which is a little dangerous
-  ...merge({}, testPayload, value),
+}): TestPayload<Fields, Settings> => ({
+  ...testPayload,
+  ...overrides,
   fields,
   settings,
 })
